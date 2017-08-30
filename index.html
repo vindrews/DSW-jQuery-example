@@ -3,14 +3,26 @@
  <head>
    <title>Example web page</title>
    <link rel="stylesheet" type="text/css" href="mystyle.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script>
+     $(document).ready(function() {
+	   $("h1").click(function() {
+		$("p").css({"color":"red", "background-color": "yellow"});
+		$("img").css("border","25px solid black");
+	   });
+	 });
+   </script>
  </head>
  <body>
    <h1>Hello, World</h1>
-   <p>
+   <p id="p1">
      Welcome to my web page.  This
      web page is a demonstration of
      HTML.
    </p>
+   <p id="p2" class="disappear"> This is the second paragraph.</p>
+   <p class="disappear"> This is the third paragraph.</p>
+   <p id="imagetoggler">Click to see an image.</p>
    <img src="laser-radial.jpg" alt="Laser Radial sailboat">
  </body>
 </html>
