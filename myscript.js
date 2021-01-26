@@ -4,6 +4,6 @@ $(document).ready(function() {
 		$("img").css("border","25px solid black");
 	});
 	$("#imagetoggler").click(function(){
-		$("img").hide();
+		$("img").toggle();
 	});
 });
